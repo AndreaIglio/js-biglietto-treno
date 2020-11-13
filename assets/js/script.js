@@ -46,8 +46,11 @@ else if (etaPassenger >= 65) {
 
 finalPrice = ticketPrice - discountOver65;
 console.log(finalPrice);
-
 }
 
+else {
+    finalPrice = ticketPrice;
+    console.log(finalPrice);
+}
 
 document.getElementById('ticketprice').innerHTML = finalPrice.toFixed(2);
