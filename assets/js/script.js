@@ -24,7 +24,7 @@ document.getElementById('ticketprice').innerHTML = ticketPrice;
 
 // Discount minorenni/over65
 
-if (etaPassenger < 18 && etaPassenger > 0)  {
+if (etaPassenger < 18)  {
 
 document.getElementById('ticketprice').innerHTML = ticketPriceUnderage
 
@@ -33,4 +33,3 @@ document.getElementById('ticketprice').innerHTML = ticketPriceUnderage
 else if (etaPassenger >= 65) {
     document.getElementById('ticketprice').innerHTML = ticketPriceOver65
 }
-
