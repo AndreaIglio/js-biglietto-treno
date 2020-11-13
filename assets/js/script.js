@@ -1,4 +1,8 @@
-
+// Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
+// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
+// il prezzo del biglietto è definito in base ai km (0.21 € al km)
+// va applicato uno sconto del 20% per i minorenni
+// va applicato uno sconto del 40% per gli over 65
 
 // Quanti km che si vogliono percorrere
 
@@ -8,28 +12,42 @@ var kmPassenger = Number(prompt("Quanti km vuoi percorrere?"));
 
 var etaPassenger = Number(prompt("Quanti anni hai?"));
 
+//  prezzo al km
+
+var kmPrice = 0.21;
+
 // final price calc
 
-var ticketPrice = kmPassenger * 0.21;
+var ticketPrice = kmPassenger * kmPrice;
+console.log(ticketPrice);
 
-// final price underage
+// discount underage
 
-var ticketPriceUnderage = ticketPrice - (ticketPrice * (20/100));
+var discountUnder = ticketPrice * 0.2;
+console.log(discountUnder);
 
-// final price over65
+// discount over65
 
-var ticketPriceOver65 = ticketPrice - (ticketPrice * (40/100));
+var discountOver65 = ticketPrice * 0.4;
+console.log(discountOver65);
 
-document.getElementById('ticketprice').innerHTML = ticketPrice;
+var finalPrice;
 
-// Discount minorenni/over65
+// Prezzo finale over/under
 
 if (etaPassenger < 18)  {
 
-document.getElementById('ticketprice').innerHTML = ticketPriceUnderage
+finalPrice = ticketPrice - discountUnder;
+console.log(finalPrice);
 
 }
 
 else if (etaPassenger >= 65) {
-    document.getElementById('ticketprice').innerHTML = ticketPriceOver65
+
+finalPrice = ticketPrice - discountOver65;
+console.log(finalPrice);
+
 }
+
+
+document.getElementById('ticketprice').innerHTML = finalPrice.toFixed(2);
