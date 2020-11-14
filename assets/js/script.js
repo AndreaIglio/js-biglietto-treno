@@ -53,4 +53,6 @@ else {
     console.log(finalPrice);
 }
 
-document.getElementById('ticketprice').innerHTML = finalPrice.toFixed(2);
+
+document.getElementById('ticketprice').innerHTML = "Gentile cliente Il prezzo pieno del suo biglietto ammonta a " + ticketPrice.toFixed(2) + "&euro;";
+document.getElementById('ticketfinalprice').innerHTML = "Il prezzo del suo biglietto scontato ammonta a " + finalPrice.toFixed(2) + "&euro;";

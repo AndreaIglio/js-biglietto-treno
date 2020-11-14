@@ -3,3 +3,48 @@
   padding: 0;
   box-sizing:border-box;
 }
+body {
+  font-family: 'Roboto';
+}
+
+
+/* UTILITY CLASS */
+
+.d-flex {
+  display: flex;
+}
+
+/* /UTILITY CLASS */
+
+.wrapper {
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+}
+
+
+/* main */
+
+.ticket_price {
+  color: black;
+  width: 30%;
+  flex-direction: column;
+  background-color: #ffffffc4;
+  border-radius: 10px;
+  border: 5px solid grey;
+  height: 30%;
+  text-align: center;
+}
+
+.ticket_price > * {
+  height: 20%;
+}
+
+.ticket_price .what_price {
+  font-size: 25px;
+}
+
+/* /main */
