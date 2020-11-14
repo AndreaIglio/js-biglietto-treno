@@ -53,6 +53,8 @@ else {
     console.log(finalPrice);
 }
 
+var elemPrice = document.getElementById('ticketprice');
+var elemFinalPrice = document.getElementById('ticketfinalprice');
 
-document.getElementById('ticketprice').innerHTML = "Gentile cliente Il prezzo pieno del suo biglietto ammonta a " + ticketPrice.toFixed(2) + "&euro;";
-document.getElementById('ticketfinalprice').innerHTML = "Il prezzo del suo biglietto scontato ammonta a " + finalPrice.toFixed(2) + "&euro;";
+elemPrice.innerHTML = "Gentile cliente Il prezzo pieno del suo biglietto ammonta a " + ticketPrice.toFixed(2) + "&euro;";
+elemFinalPrice.innerHTML = "Il prezzo del suo biglietto scontato ammonta a " + finalPrice.toFixed(2) + "&euro;";
