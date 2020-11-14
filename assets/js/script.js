@@ -4,20 +4,18 @@
 // va applicato uno sconto del 20% per i minorenni
 // va applicato uno sconto del 40% per gli over 65
 
-// Quanti km che si vogliono percorrere
 
+
+// Quanti km che si vogliono percorrere
 var kmPassenger = Number(prompt("Quanti km vuoi percorrere?"));
 
 // Quanti anni hai?
-
 var etaPassenger = Number(prompt("Quanti anni hai?"));
 
 //  prezzo al km
-
 var kmPrice = 0.21;
 
-// final price calc
-
+// final ticketprice calc
 var ticketPrice = kmPassenger * kmPrice;
 console.log(ticketPrice);
 
@@ -31,9 +29,17 @@ console.log(discountUnder);
 var discountOver65 = ticketPrice * 0.4;
 console.log(discountOver65);
 
+
+// variabili non definite
+
 var finalPrice;
 
-// Prezzo finale over/under
+// /variabili non definite
+
+
+
+
+// Ticketfinalprice under/over
 
 if (etaPassenger < 18)  {
 
